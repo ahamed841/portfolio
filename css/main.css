@@ -385,6 +385,8 @@
     background-image: url(../img/about_us.jpg);
 }*/
 
+
+
 .about-image-1 {
     background-image: url(https://dummyimage.com/1400x1000/5d5d5d/838383);
 }
@@ -2970,7 +2972,8 @@ p.t-semibold {
 }
 
 .btn-outline {
-    background-color: transparent;
+        background-color: #ffffff66;
+    /*background-color: transparent;*/
     border-style: solid;
     border-color: var(--st-bright);
     color: var(--t-bright);
@@ -4167,7 +4170,9 @@ form {
     position: relative;
     width: 100%;
 }
-form input, form textarea {
+form input,
+form textarea,
+form select {
     position: relative;
     display: block;
     width: 100%;
@@ -4181,6 +4186,23 @@ form input, form textarea {
     height: 6rem;
     line-height: 6rem;
     color: var(--t-bright);
+    appearance: none; /* Hide default dropdown arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Add focus style for select */
+form select:focus {
+    border-bottom: 2px solid var(--st-bright);
+}
+
+/* Optional: add a custom arrow using background image or pseudo-element */
+form select {
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%23ffffff' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.6rem;
+    padding-right: 3rem; /* Leave space for arrow */
 }
 form input:focus, form textarea:focus {
     border-bottom: 2px solid var(--st-bright);
@@ -6536,7 +6558,8 @@ form textarea:required:valid {
         padding-top: 11.1rem;
         margin-bottom: -1rem;
     }
-}mxd-container__circle
+}
+mxd-container__circle
 
 .mxd-footer__svg-v2 {
     position: relative;
@@ -10853,11 +10876,40 @@ form textarea:required:valid {
     position: relative;
     width: 100%;
     padding-top: 11rem;
+     background: none; /* Default: no image on desktop */
 }
 @media only screen and (min-width: 768px) {
     .mxd-hero-09 {
         padding-top: 14.8rem;
+       
     }
+}
+
+@media (max-width: 700px) {
+  .mxd-hero-09 {
+       
+         background-image: url('../img/hero/mobile_hero.avif'); /* Replace with your mobile hero image path */
+    background-size: inherit;
+        background-position: top;
+        background-repeat: no-repeat;
+    }
+    
+    .tag-outline {
+    background-color: #00000094;
+    border-style: solid;
+    border-color: var(--st-bright);
+    color: #f5e5e5;
+}
+.hero-09-headline__caption p{
+       background: #fbf5f5d4;
+        border-radius: 7px;
+        padding: 5px;
+}
+
+.mxd-hero-00__marquee .marquee__item.item-regular p{    
+                font-size: 3rem;
+    }
+    
 }
 @media only screen and (min-width: 1200px) {
     .mxd-hero-09 {
